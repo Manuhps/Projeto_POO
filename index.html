@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Caminho de Santiago</title>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-inner">
+          <!-- Botão do menu hambúrguer -->
+          <button class="nav-toggle" aria-label="Abrir menu">☰</button>
+          
+          <!-- Logotipo à direita -->
+          <a href="#" class="logo">
+            <img src="img/logo.png" alt="Concha Caminho de Santiago" class="logo img">
+          </a>
+        </div>
+      
+        <!-- Menu lateral (escondido por padrão) -->
+        <nav class="side-nav">
+          <div class="auth-buttons" id="auth-buttons">
+            <a href="html/login.html" class="btn btn-login">Login</a>
+            <a href="html/register.html" class="btn btn-register">Registo</a>
+          </div>
+          <ul>
+            <li><a href="#" id="open-form">Planejar Viagem</a></li> <!-- Botão para abrir o modal -->
+            <li><a href="#">Places</a></li>
+            <li><a href="#">Planning</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <section class="hero">
+        <div class="container hero-inner">
+          <img src="img/principal.png" alt="Caminho de Santiago" class="hero-image">
+        </div>
+      </section>
+
+      <!-- Modal do formulário -->
+<div id="travel-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-button">&times;</span>
+    <h2>Planejar Viagem</h2>
+    <form id="travel-form">
+      <label for="departure">Local de partida:</label>
+      <input type="text" id="departure" name="departure" placeholder="Ex: Porto, Lisboa" required>
+
+      <label for="destination">Local de destino:</label>
+      <input type="text" id="destination" name="destination" placeholder="Ex: Santiago de Compostela" required>
+
+      <label for="travel-date">Data da viagem:</label>
+      <input type="date" id="travel-date" name="travel-date" required>
+
+      <label for="days">Número de dias de viagem:</label>
+      <input type="number" id="days" name="days" min="1" required>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</div>
+
+      <section class="caminho-info">
+        <div class="container">
+          <h1>Caminho de Santiago Routes</h1>
+          <h2>O que é o Caminho de Santiago?</h2>
+      
+          <h3>Peregrinação:</h3>
+          <p>É uma jornada religiosa e cultural que atrai pessoas de todo o mundo, com a intenção de chegar a Santiago de Compostela, onde se acredita que estão os restos mortais do apóstolo Tiago.</p>
+      
+          <h3>Roteiros:</h3>
+          <p>Existem vários caminhos que levam a Santiago, com diferentes origens e durações, como o Caminho Francês, o Caminho Português, o Caminho Primitivo, entre outros.</p>
+      
+          <h3>A Experiência:</h3>
+          <p>A peregrinação é uma oportunidade para conhecer a história, a cultura e as tradições da Galiza e de outros locais que integram o caminho, além de ser uma jornada de reflexão e autoconhecimento.</p>
+      
+          <h3>Por que fazer o Caminho de Santiago?</h3>
+          <h4>Fé:</h4>
+          <p>Para muitos, o Caminho é uma jornada religiosa, uma forma de expressar fé e devoção a São Tiago.</p>
+      
+          <h4>Aventura:</h4>
+          <p>É uma aventura física e mental, que desafia os limites e promove o desenvolvimento pessoal.</p>
+      
+          <h4>Cultura:</h4>
+          <p>Permite conhecer a história e a cultura da Galiza e de outros locais, com a oportunidade de interagir com a população local e com outros peregrinos.</p>
+      
+          <h4>Turismo:</h4>
+          <p>É um destino turístico muito popular, com uma rede de albergues, restaurantes e outros serviços que facilitam a experiência do peregrino.</p>
+      
+          <h3>Como fazer o Caminho de Santiago?</h3>
+          <h4>Planeamento:</h4>
+          <p>É importante planejar a peregrinação com antecedência, escolhendo o caminho, a época do ano, o tipo de transporte e o alojamento.</p>
+      
+          <h4>Equipamento:</h4>
+          <p>É necessário ter o equipamento adequado, como mochila, calçado confortável, roupa adequada ao clima e outros acessórios.</p>
+      
+          <h4>Credencial:</h4>
+          <p>A credencial do peregrino é essencial para ter acesso aos albergues e para obter a Compostela, que é uma certificação de conclusão da peregrinação.</p>
+      
+          <h4>Segurança:</h4>
+          <p>É importante ter atenção à segurança, seguindo as indicações dos sinais e cuidando da saúde e do bem-estar durante a jornada.</p>
+        </div>
+      </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <ul class="footer-nav">
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Articles</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+      <div class="footer-copy">
+        2025 © Caminho de Santiago. Todos os direitos reservados.
+      </div>
+      <button class="go-top" aria-label="Voltar ao topo">▴</button>
+    </div>
+  </footer>
+
+  <script src="js/index.js"></script>
+  
+</body>
+</html>

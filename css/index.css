@@ -1,0 +1,465 @@
+/* Reset simples */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonts (pode apontar a Google Fonts) */
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #222;
+  line-height: 1.5;
+}
+
+/* Container centralizado */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Estilo do cabeçalho */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f8f8f8;
+  position: relative;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Botão menu hambúrguer */
+.nav-toggle {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  margin-right: auto; /* Alinha o botão à esquerda */
+}
+
+/* Logotipo à direita */
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  margin-left: auto; /* Alinha o logotipo à direita */
+}
+
+.logo img {
+  max-width: 120px; /* Aumente o tamanho máximo da largura */
+  height: auto; /* Mantém a proporção da imagem */
+  display: block; /* Remove espaços extras ao redor da imagem */
+  margin: 0 auto; /* Centraliza a imagem horizontalmente */
+}
+.logo span {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #004080;
+}
+
+.hero-image {
+  max-width: 100%; /* Define a largura máxima como 80% do container */
+  height: 450px; /* Mantém a proporção da imagem */
+  width: 1100px;
+  display: block; /* Remove espaços extras ao redor da imagem */
+  margin: 0 auto; /* Centraliza a imagem horizontalmente */
+}
+/* Estilo para os títulos principais */
+.caminho-info h1 {
+  font-size: 2.5rem;
+  color: #2c3e50; /* Azul escuro */
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Estilo para os subtítulos */
+.caminho-info h2, .caminho-info h3, .caminho-info h4 {
+  color: #34495e; /* Azul acinzentado */
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+/* Estilo para os parágrafos */
+.caminho-info p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555; /* Cinza escuro */
+  margin-bottom: 1rem;
+}
+
+/* Adiciona um fundo e padding à seção */
+.caminho-info {
+  background-color: #f9f9f9; /* Fundo claro */
+  padding: 2rem;
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+/* Centraliza o texto */
+.caminho-info .container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+/* Menu lateral */
+.side-nav {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Escondido fora da tela */
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  transition: left 0.3s ease;
+}
+
+.side-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.side-nav li {
+  margin: 15px 0;
+}
+
+.side-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.side-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Botões de Login e Registo na side-nav */
+.auth-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem; /* Espaço abaixo dos botões */
+}
+
+.auth-buttons .btn {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.auth-buttons .btn-login {
+  background-color: #004080; /* Azul intenso */
+  color: #fff;
+}
+
+.auth-buttons .btn-login:hover {
+  background-color: #003060; /* Azul mais escuro */
+}
+
+.auth-buttons .btn-register {
+  background-color: #e0a419; /* Amarelo Santiago */
+  color: #004080; /* Azul intenso */
+}
+
+.auth-buttons .btn-register:hover {
+  background-color: #ffc900; /* Amarelo mais claro */
+  color: #003060; /* Azul mais escuro */
+}
+
+/* Mostrar o menu lateral quando ativo */
+.side-nav.active {
+  left: 0;
+}
+
+/* Estilo do modal */
+.modal {
+  display: none; /* Esconde o modal por padrão */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro com transparência */
+}
+
+/* Conteúdo do modal */
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Botão de fechar */
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  color: #000;
+}
+
+/* Estilo do formulário */
+#travel-form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+#travel-form input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#travel-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#travel-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Hero Section */
+.hero {
+  background: url('../images/hero-bg.jpg') center/cover no-repeat;
+  color: #fff;
+  padding: 6rem 0;
+  text-align: center;
+}
+
+.hero-inner h4 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  color: #e0a419;
+}
+
+.hero-inner h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-family: 'Merriweather', serif;
+  letter-spacing: 2px;
+}
+
+.hero-inner p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .hero-inner h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Container do botão de logout */
+.logout-container {
+  position: absolute;
+  bottom: 60px; /* Subiu o botão para ficar mais visível */
+  left: 20px;
+  right: 20px;
+  text-align: center;
+}
+
+.logout-container .btn-logout {
+  background-color: #e63946; /* Vermelho */
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-container .btn-logout:hover {
+  background-color: #d62828; /* Vermelho mais escuro */
+}
+
+/* Footer */
+.site-footer {
+  background-color: #004080; /* azul intenso */
+  color: #fff;
+  padding: 2rem 0;
+  position: relative;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Navegação do footer */
+.footer-nav {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-nav a {
+  color: #e0a419; /* amarelo santiago */
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.footer-nav a:hover {
+  color: #ffc900;
+}
+
+/* Copyright */
+.footer-copy {
+  flex: 1;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Botão "voltar ao topo" */
+.go-top {
+  background-color: #e0a419;
+  border: none;
+  color: #004080;
+  font-size: 1.2rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.go-top:hover {
+  background-color: #ffc900;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .footer-copy {
+    order: 3;
+  }
+
+  .go-top {
+    order: 2;
+  }
+
+  .footer-nav {
+    justify-content: center;
+    order: 1;
+  }
+}
+
+/* Estilo do modal */
+.modal {
+  display: none; /* Esconde o modal por padrão */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro com transparência */
+}
+
+/* Conteúdo do modal */
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Botão de fechar */
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  color: #000;
+}
+
+/* Estilo do formulário */
+#travel-form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+#travel-form input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#travel-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#travel-form button:hover {
+  background-color: #0056b3;
+}
