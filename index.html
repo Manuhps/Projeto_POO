@@ -40,27 +40,35 @@
       </section>
 
       <!-- Modal do formulário -->
-<div id="travel-modal" class="modal">
-  <div class="modal-content">
-    <span class="close-button">&times;</span>
-    <h2>Planejar Viagem</h2>
-    <form id="travel-form">
-      <label for="departure">Local de partida:</label>
-      <input type="text" id="departure" name="departure" placeholder="Ex: Porto, Lisboa" required>
+    <div id="travel-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Planear Viagem</h2>
+        <form id="travel-form">
+          <label for="departure">Local de partida:</label>
+          <select id="departure" name="departure" required>
+            <option value="" disabled selected>Selecione o local de partida</option>
+          </select>
+        
+          <label for="destination">Local de destino:</label>
+          <select id="destination" name="destination" required>
+            <option value="" disabled selected>Selecione o local de destino</option>
+          </select>
+        
+          <label for="travel-date">Data da viagem:</label>
+          <input type="date" id="travel-date" name="travel-date" required>
+        
+          <label for="days">Número de dias de viagem:</label>
+          <input type="number" id="days" name="days" min="1" required>
+        
+          <button type="submit">Enviar</button>
 
-      <label for="destination">Local de destino:</label>
-      <input type="text" id="destination" name="destination" placeholder="Ex: Santiago de Compostela" required>
+          <div id="resultados" class="resultados"></div>
+        </form>
+      </div>
+    </div>
 
-      <label for="travel-date">Data da viagem:</label>
-      <input type="date" id="travel-date" name="travel-date" required>
-
-      <label for="days">Número de dias de viagem:</label>
-      <input type="number" id="days" name="days" min="1" required>
-
-      <button type="submit">Enviar</button>
-    </form>
-  </div>
-</div>
+    
 
       <section class="caminho-info">
         <div class="container">
@@ -119,7 +127,8 @@
     </div>
   </footer>
 
-  <script src="js/index.js"></script>
+  <script type="module" src="js/index.js"></script>
+  <script type="module" src="js/controllers/viagemController.js"></script>
   
 </body>
 </html>

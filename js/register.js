@@ -1,29 +1,31 @@
-// Função para salvar um utilizador no Local Storage
-function saveUser(user) {
-    let users = JSON.parse(localStorage.getItem('users')) || [];
-    users.push(user);
-    localStorage.setItem('users', JSON.stringify(users));
+import { getUsers, saveUser } from "../js/models/loginModel.js";
+
+// Evento de registro
+document.getElementById('register-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const username = document.getElementById('register-username').value.trim();
+  const password = document.getElementById('register-password').value.trim();
+
+  // Validação básica
+  if (username.length < 3 || password.length < 6) {
+    alert('O username deve ter pelo menos 3 caracteres e a password pelo menos 6 caracteres.');
+    return;
   }
-  
-  // Evento de registro
-  document.getElementById('register-form').addEventListener('submit', function (e) {
-    e.preventDefault();
-  
-    const username = document.getElementById('register-username').value;
-    const password = document.getElementById('register-password').value;
-  
-    const user = { username, password, userType: 'regular' };
-  
-    // Verifica se o utilizador já existe
-    let users = JSON.parse(localStorage.getItem('users')) || [];
-    if (users.some(u => u.username === username)) {
-      alert('Este username já está em uso. Escolha outro.');
-      return;
-    }
-  
-    saveUser(user);
-  
-    alert('Utilizador registrado com sucesso!');
-    this.reset(); // Limpa o formulário
-    window.location.href = '../html/login.html'; // Redireciona para a página de login
-  });
+
+  // Verifica se o utilizador já existe
+  const users = getUsers();
+  if (users.some(u => u.username === username)) {
+    alert('Este username já está em uso. Escolha outro.');
+    return;
+  }
+
+  // Salvar o utilizador
+  const user = { username, password, userType: 'regular' };
+  saveUser(user);
+
+  alert('Utilizador registrado com sucesso!');
+  setTimeout(() => {
+    window.location.href = '../html/login.html';
+  }, 2000); // Redireciona após 2 segundos
+});
