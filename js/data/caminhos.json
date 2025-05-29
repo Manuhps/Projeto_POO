@@ -1,0 +1,160 @@
+{
+  "caminhos": [
+    {
+      "id": 1,
+      "nome": "Caminho Português",
+      "descricao": "O caminho mais popular entre os peregrinos portugueses, com início em Lisboa ou Porto",
+      "dificuldade": "Média",
+      "distancia_total": 240,
+      "etapas": [
+        {
+          "id": 1,
+          "nome": "Porto - Vilarinho",
+          "partida": "Porto",
+          "destino": "Vilarinho",
+          "distancia": 20,
+          "dificuldade": "Fácil",
+          "pontos_interesse": [
+            {
+              "nome": "Sé do Porto",
+              "descricao": "Catedral histórica do Porto",
+              "tipo": "Religioso",
+              "coordenadas": {
+                "lat": 41.1425,
+                "lng": -8.6114
+              }
+            },
+            {
+              "nome": "Ponte D. Luís I",
+              "descricao": "Ponte icônica sobre o Rio Douro",
+              "tipo": "Arquitetônico",
+              "coordenadas": {
+                "lat": 41.1406,
+                "lng": -8.6099
+              }
+            }
+          ],
+          "albergues": [
+            {
+              "nome": "Albergue de Vilarinho",
+              "preco": 10,
+              "capacidade": 20,
+              "coordenadas": {
+                "lat": 41.1500,
+                "lng": -8.6000
+              }
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "nome": "Vilarinho - Barcelos",
+          "partida": "Vilarinho",
+          "destino": "Barcelos",
+          "distancia": 25,
+          "dificuldade": "Média",
+          "pontos_interesse": [
+            {
+              "nome": "Centro Histórico de Barcelos",
+              "descricao": "Centro histórico com arquitetura tradicional",
+              "tipo": "Cultural",
+              "coordenadas": {
+                "lat": 41.5333,
+                "lng": -8.6167
+              }
+            }
+          ],
+          "albergues": [
+            {
+              "nome": "Albergue de Barcelos",
+              "preco": 12,
+              "capacidade": 30,
+              "coordenadas": {
+                "lat": 41.5333,
+                "lng": -8.6167
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nome": "Caminho Francês",
+      "descricao": "O caminho mais tradicional e popular, com início em Saint-Jean-Pied-de-Port",
+      "dificuldade": "Alta",
+      "distancia_total": 780,
+      "etapas": [
+        {
+          "id": 1,
+          "nome": "Saint-Jean-Pied-de-Port - Roncesvalles",
+          "partida": "Saint-Jean-Pied-de-Port",
+          "destino": "Roncesvalles",
+          "distancia": 25,
+          "dificuldade": "Alta",
+          "pontos_interesse": [
+            {
+              "nome": "Porta de Santiago",
+              "descricao": "Porta histórica de entrada",
+              "tipo": "Histórico",
+              "coordenadas": {
+                "lat": 43.1631,
+                "lng": -1.2381
+              }
+            },
+            {
+              "nome": "Igreja de Santiago",
+              "descricao": "Igreja histórica no início do caminho",
+              "tipo": "Religioso",
+              "coordenadas": {
+                "lat": 43.1631,
+                "lng": -1.2381
+              }
+            }
+          ],
+          "albergues": [
+            {
+              "nome": "Albergue de Roncesvalles",
+              "preco": 12,
+              "capacidade": 120,
+              "coordenadas": {
+                "lat": 43.0092,
+                "lng": -1.3194
+              }
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "nome": "Roncesvalles - Zubiri",
+          "partida": "Roncesvalles",
+          "destino": "Zubiri",
+          "distancia": 22,
+          "dificuldade": "Média",
+          "pontos_interesse": [
+            {
+              "nome": "Ponte Romana de Zubiri",
+              "descricao": "Ponte histórica sobre o rio Arga",
+              "tipo": "Histórico",
+              "coordenadas": {
+                "lat": 42.9333,
+                "lng": -1.5000
+              }
+            }
+          ],
+          "albergues": [
+            {
+              "nome": "Albergue de Zubiri",
+              "preco": 15,
+              "capacidade": 50,
+              "coordenadas": {
+                "lat": 42.9333,
+                "lng": -1.5000
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+} 

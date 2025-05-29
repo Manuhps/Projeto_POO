@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caminhos de Santiago</title>
+    <link rel="stylesheet" href="../css/caminhos.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <button class="nav-toggle" aria-label="Abrir menu">☰</button>
+            <a href="../index.html" class="logo">
+                <img src="../img/logo.png" alt="Concha Caminho de Santiago" class="logo img">
+            </a>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Caminhos de Santiago</h1>
+        <div class="filtros">
+            <input type="text" id="search" placeholder="Pesquisar caminhos...">
+            <select id="dificuldade">
+                <option value="">Todas as dificuldades</option>
+                <option value="Fácil">Fácil</option>
+                <option value="Média">Média</option>
+                <option value="Alta">Alta</option>
+            </select>
+        </div>
+        
+        <div class="caminhos-grid" id="caminhos-container">
+            <!-- Os cards serão inseridos aqui via JavaScript -->
+        </div>
+    </main>
+
+    <script type="module" src="../js/controllers/caminhosController.js"></script>
+</body>
+</html> 
