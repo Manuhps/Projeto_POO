@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Caminho - Caminho de Santiago</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/detalhes.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <button class="nav-toggle" aria-label="Abrir menu">☰</button>
+            <a href="../index.html" class="logo">
+                <img src="../img/logo.png" alt="Concha Caminho de Santiago" class="logo img">
+            </a>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="caminho-detalhes">
+            <div class="caminho-header">
+                <h1 id="caminho-nome"></h1>
+                <div class="caminho-info">
+                    <span id="caminho-dificuldade" class="dificuldade"></span>
+                    <span id="caminho-distancia"></span>
+                </div>
+                <p id="caminho-descricao" class="descricao"></p>
+            </div>
+
+            <div class="etapas-container">
+                <h2>Etapas do Caminho</h2>
+                <div id="etapas-lista"></div>
+            </div>
+
+            <div class="mapa-container">
+                <h2>Mapa do Percurso</h2>
+                <div id="mapa">
+                    <!-- Aqui vamos colocar a imagem do mapa -->
+                    <img id="mapa-imagem" src="" alt="Mapa do percurso">
+                </div>
+            </div>
+
+            <div class="pontos-interesse">
+                <h2>Pontos de Interesse</h2>
+                <div id="pontos-lista"></div>
+            </div>
+
+            <div class="albergues">
+                <h2>Albergues</h2>
+                <div id="albergues-lista"></div>
+            </div>
+
+            <div class="gamificacao">
+                <h2>Conquistas</h2>
+                <div class="pontos">
+                    <span>Pontos ao completar este caminho: </span>
+                    <span id="pontos-caminho"></span>
+                </div>
+                <button id="btn-favorito" class="btn-favorito">Adicionar aos Favoritos</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <ul class="footer-nav">
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Articles</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+            <div class="footer-copy">
+                2025 © Caminho de Santiago. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="../js/controllers/detalhesController.js"></script>
+</body>
+</html> 

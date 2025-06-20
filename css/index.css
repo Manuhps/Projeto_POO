@@ -74,6 +74,7 @@ body {
   display: block; /* Remove espaços extras ao redor da imagem */
   margin: 0 auto; /* Centraliza a imagem horizontalmente */
 }
+
 /* Estilo para os títulos principais */
 .caminho-info h1 {
   font-size: 2.5rem;
@@ -480,4 +481,78 @@ body {
   padding: 10px;
   background-color: #f9f9f9;
   border-radius: 5px;
+}
+/* Footer */
+.site-footer {
+  background-color: #333;
+  color: #fff;
+  padding: 2rem 0;
+  margin-top: 3rem;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-nav {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.footer-nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.itinerario-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.itinerario-card h3 {
+  color: #004080;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #e0a419;
+  padding-bottom: 0.5rem;
+}
+
+.dia-etapa {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+  border-left: 3px solid #004080;
+}
+
+.dia-etapa h4 {
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.dia-etapa ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.dia-etapa li {
+  padding: 0.3rem 0;
+  color: #555;
+  border-bottom: 1px dashed #eee;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

@@ -1,38 +1,76 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caminhos de Santiago</title>
-    <link rel="stylesheet" href="../css/caminhos.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caminhos de Santiago</title>
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/caminhos.css">
 </head>
 <body>
-    <header class="site-header">
-        <div class="container header-inner">
-            <button class="nav-toggle" aria-label="Abrir menu">☰</button>
-            <a href="../index.html" class="logo">
-                <img src="../img/logo.png" alt="Concha Caminho de Santiago" class="logo img">
-            </a>
-        </div>
-    </header>
+  <header class="site-header">
+    <div class="container header-inner">
+      <button class="nav-toggle" aria-label="Abrir menu">☰</button>
+      <a href="../index.html" class="logo">
+        <img src="../img/logo.png" alt="Concha Caminho de Santiago" class="logo img">
+      </a>
+    </div>
+  </header>
 
-    <main class="container">
-        <h1>Caminhos de Santiago</h1>
-        <div class="filtros">
-            <input type="text" id="search" placeholder="Pesquisar caminhos...">
-            <select id="dificuldade">
-                <option value="">Todas as dificuldades</option>
-                <option value="Fácil">Fácil</option>
-                <option value="Média">Média</option>
-                <option value="Alta">Alta</option>
-            </select>
-        </div>
-        
-        <div class="caminhos-grid" id="caminhos-container">
-            <!-- Os cards serão inseridos aqui via JavaScript -->
-        </div>
-    </main>
+  <!-- Side Navigation -->
+  <nav class="side-nav">
+    <ul>
+      <li><a href="caminhos.html">Caminhos</a></li>
+      <li><a href="detalhes.html">Detalhes</a></li>
+      <li><a href="admin.html">Admin</a></li>
+    </ul>
+    <div class="auth-buttons">
+      <a href="login.html" class="btn btn-login">Login</a>
+      <a href="register.html" class="btn btn-register">Registar</a>
+    </div>
+    <div class="logout-container">
+      <button class="btn-logout">Logout</button>
+    </div>
+  </nav>
 
-    <script type="module" src="../js/controllers/caminhosController.js"></script>
+  <main>
+    <div class="caminhos-container" id="caminhos-container">
+      <!-- Os cartões dos caminhos serão inseridos aqui pelo JavaScript -->
+    </div>
+  </main>
+
+  <!-- Modal de Login -->
+  <div id="login-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <div class="modal-header">
+        <h2>Login Necessário</h2>
+      </div>
+      <div class="modal-body">
+        <p>Para ver os detalhes deste caminho, você precisa estar logado.</p>
+        <div class="modal-buttons">
+          <a href="login.html" class="btn btn-login">Fazer Login</a>
+          <a href="register.html" class="btn btn-register">Criar Conta</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <ul class="footer-nav">
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Articles</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+      <div class="footer-copy">
+        2025 © Caminho de Santiago. Todos os direitos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/views/index.js"></script>
+  <script type="module" src="../js/controllers/caminhosController.js"></script>
 </body>
-</html> 
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel Admin - Caminho de Santiago</title>
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <button class="nav-toggle" aria-label="Abrir menu">☰</button>
+      <a href="../index.html" class="logo">
+        <img src="../img/logo.png" alt="Concha Caminho de Santiago" class="logo img">
+      </a>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="admin-container">
+      <h1>Painel de Administração</h1>
+      
+      <div class="admin-sections">
+        <section class="admin-section">
+          <h2>Gestão de Caminhos</h2>
+          <form id="caminho-form">
+            <input type="hidden" id="caminho-id">
+            <div class="form-group">
+              <label for="nome">Nome:</label>
+              <input type="text" id="nome" required>
+            </div>
+            <div class="form-group">
+              <label for="descricao">Descrição:</label>
+              <textarea id="descricao" required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="dificuldade">Dificuldade:</label>
+              <select id="dificuldade" required>
+                <option value="fácil">Fácil</option>
+                <option value="média">Média</option>
+                <option value="difícil">Difícil</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="distancia">Distância (km):</label>
+              <input type="number" id="distancia" required>
+            </div>
+            <button type="submit">Salvar Caminho</button>
+          </form>
+        </section>
+
+        <section class="admin-section">
+          <h2>Lista de Caminhos</h2>
+          <div id="caminhos-lista"></div>
+        </section>
+
+        <section class="admin-section">
+          <h2>Estatísticas</h2>
+          <div id="estatisticas">
+            <p>Total de Caminhos: <span id="total-caminhos">0</span></p>
+            <p>Total de Etapas: <span id="total-etapas">0</span></p>
+            <p>Total de Albergues: <span id="total-albergues">0</span></p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <ul class="footer-nav">
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Articles</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+      <div class="footer-copy">
+        2025 © Caminho de Santiago. Todos os direitos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="../js/controllers/adminController.js"></script>
+</body>
+</html>
